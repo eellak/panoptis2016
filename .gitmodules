@@ -1,0 +1,3 @@
+[submodule "ep4-mobile_forensics/app"]
+	path = ep4-mobile_forensics/app
+	url = https://github.com/eellak/panoptis2016-mobile.git
