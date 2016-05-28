@@ -85,6 +85,8 @@ android:grantUriPermissions="true"
 
 Δημιουργήσαμε μία εφαρμογή που εκμεταλλεύεται τους content providers του PwdManager και του SafeNote για να διαβάσει τα passwords και τις σημειώσεις σε encrypted μορφή. Επόμενο βήμα ήταν η κωδικοποίηση των decryption functions για τα passwords και τις σημειώσεις ξεχωριστά ωστέ τα δεδομένα να εμφανίζονται στους χρήστες της εφαρμογής μας σε plain text μορφή.
 
+![ELLAK Application](screen10.png "ELLAK Application")
+
 
 ## Authors
 
