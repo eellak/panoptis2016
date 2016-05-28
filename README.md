@@ -1,4 +1,4 @@
-# ΕΕΛ/ΛΑΚ -- Writeups για τα επεισόδια της Άσκησης Κυβερνοάμυνας Πανόπτης 2016
+# ΕΕΛ/ΛΑΚ - Writeups για τα επεισόδια της Άσκησης Κυβερνοάμυνας Πανόπτης 2016
 
 Τα επεισόδια της άσκησης ήταν τα εξής:
 
@@ -9,5 +9,3 @@
 * [Επεισόδιο 5 - Network Forensics Challenge](ep5-net_forensics/README.md)
 * [Επεισόδιο 6 - Επίθεση εκ των έσω και διαρροή δεδομένων (Insider attack - Data leakage)](ep6-data_leakage/README.md)
 * [Επεισόδιο 7 - Capture the flag](ep7-ctf/README.md)
-
-![Round Table Security](round-table-security.png "Round Table Security")

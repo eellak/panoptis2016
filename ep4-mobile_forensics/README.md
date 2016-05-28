@@ -25,11 +25,11 @@
 
 Χρησιμοποιήσαμε τα εργαλεία **dex2jar** και **jd-gui** για την εξαγωγή του Java κώδικα των δύο εφαρμογών.
 
-Στον παραγώμενο κώδικα για το **PwdManager.apk** εντοπίσαμε το εξής passwords σε μορφή MD5:
+Στον παραγώμενο κώδικα για το **PwdManager.apk** εντοπίσαμε το εξής password σε μορφή MD5:
 
 ![MD5 Password](screen2.png "MD5 Password")
 
-Κάναμε recover το cleartext password χρησιμοποιώντας μία online υπηρεσία:
+Κάναμε recover το cleartext password χρησιμοποιώντας την online υπηρεσία HashKiller.co.uk:
 
 ![Cracked MD5 Password](screen3.png "Cracked MD5 Password")
 
@@ -41,7 +41,7 @@
 
 ![SafeNote Password](screen6.png "SafeNote Password")
 
-Επόμενο βήμα ήταν να πάρουμε πρόσβσαση και στην εφασρμογή SafeNote.
+Επόμενο βήμα ήταν να πάρουμε πρόσβαση στην εφαρμογή SafeNote.
 
 ![SafeNote Secret Note](screen7.png "SafeNote Secret Note")
 
