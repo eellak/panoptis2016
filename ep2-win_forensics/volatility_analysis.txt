@@ -1,0 +1,351 @@
+imageinfo - καθορίζουμε το profile των windows
+***********************************************************************************************************
+Suggested Profile(s)           : Win8SP0x86 
+                     AS Layer1 : IA32PagedMemoryPae (Kernel AS)
+                     AS Layer2 : FileAddressSpace (/mnt/hgfs/kali_share/win81.raw)
+                      PAE type : PAE
+                           DTB : 0x1a8000L
+                          KDBG : 0x81e50690L
+          Number of Processors : 1
+     Image Type (Service Pack) : 0
+                KPCR for CPU 0 : 0x81e7c000L
+             KUSER_SHARED_DATA : 0xffdf0000L
+           Image date and time : 2016-05-25 08:33:10 UTC+0000
+Image local date and time      : 2016-05-25 01:33:10 -0700
+***********************************************************************************************************
+Kdbgscan - επιβεβαιώνουμε το profile
+***********************************************************************************************************
+Instantiating KDBG using: Kernel AS Win81U0x86 (6.3.17031 32bit)
+Offset (V)                    : 0x81e50690
+Offset (P)                    : 0x2a50690
+KDBG owner tag check          : True
+Profile suggestion (KDBGHeader): Win81U1x86
+Version64                     : 0x81e50dc8 (Major: 15, Minor: 9600)
+Service Pack (CmNtCSDVersion) : 0
+Build string (NtBuildLab)     : 9600.18264.x86fre.winblue_ltsb.1
+PsActiveProcessHead           : 0x81e60c38 (52 processes)
+PsLoadedModuleList            : 0x81e69618 (162 modules)
+KernelBase                    : 0x81c6e000 (Matches MZ: True)
+Major (OptionalHeader)        : 6
+Minor (OptionalHeader)        : 3
+KPCR                          : 0x81e7c000 (CPU 0)
+
+***********************************************************************************************************
+psscan - Scanarei την _EPROCESS για ανενεργές,κρυφές και unlinked διεργασίες πιθανόν από rootkit/malware
+***********************************************************************************************************
+Offset(P)          Name                PID   PPID PDB        Time created                                      
+------------------ ---------------- ------ ------ ---------- ------------------------------ 
+0x0000000000c50040 smss.exe            256      4 0x00c52020 2016-05-25 08:17:15 UTC+0000                                 
+0x0000000000d4bc80 csrss.exe           348    340 0x00c52060 2016-05-25 08:17:16 UTC+0000                                 
+0x00000000020458c0 explorer.exe       1372   1320 0x00c52340 2016-05-25 08:17:20 UTC+0000                                 
+0x0000000008978040 lsass.exe           500    408 0x00c520e0 2016-05-25 08:17:17 UTC+0000                                 
+0x00000000089a6c80 svchost.exe         556    492 0x00c52100 2016-05-25 08:17:18 UTC+0000                                 
+0x00000000089ab640 svchost.exe         584    492 0x00c52120 2016-05-25 08:17:18 UTC+0000                                 
+0x00000000089dac80 dwm.exe             700    436 0x00c52160 2016-05-25 08:17:18 UTC+0000                                 
+0x0000000009d74040 svchost.exe         796    492 0x00c521a0 2016-05-25 08:17:18 UTC+0000                                 
+0x000000000a0236c0 svchost.exe         836    492 0x00c521c0 2016-05-25 08:17:19 UTC+0000                                 
+0x000000000c1e2c40 svchost.exe        1268    492 0x00c52280 2016-05-25 08:17:20 UTC+0000                                 
+0x000000000dd7d640 svchost.exe        1040    492 0x00c52200 2016-05-25 08:17:19 UTC+0000                                 
+0x000000000e41da80 svchost.exe         912    492 0x00c521e0 2016-05-25 08:17:19 UTC+0000                                 
+0x000000001078f580 MsMpEng.exe         536    492 0x00c52460 2016-05-25 08:17:24 UTC+0000                                 
+0x0000000013daec80 taskhostex.exe     1276    796 0x00c522a0 2016-05-25 08:17:20 UTC+0000                                 
+0x000000001558d100 dllhost.exe        2944    556 0x00c522c0 2016-05-25 08:33:08 UTC+0000                                 
+0x0000000015a3d600 svchost.exe        1756    492 0x00c523a0 2016-05-25 08:17:22 UTC+0000                                 
+0x0000000015dda840 armsvc.exe         1724    492 0x00c52380 2016-05-25 08:17:22 UTC+0000                                 
+0x0000000016bce040 wlms.exe            948    492 0x00c524a0 2016-05-25 08:17:24 UTC+0000                                 
+0x0000000017a6d100 NisSrv.exe         2572    492 0x00c524e0 2016-05-25 08:17:33 UTC+0000                                 
+0x0000000018443800 dwmss.exe          1888    492 0x00c52400 2016-05-25 08:17:23 UTC+0000                                 
+0x0000000018a89b80 vmtoolsd.exe        344    492 0x00c52420 2016-05-25 08:17:24 UTC+0000                                 
+0x0000000018c46a00 dasHost.exe        1896    912 0x00c523e0 2016-05-25 08:17:23 UTC+0000                                 
+0x000000001bb7f140 powershell.exe      296     56 0x00c52440 2016-05-25 08:17:24 UTC+0000                                 
+0x000000001c0c4040 vmtoolsd.exe       3416   1372 0x00c52560 2016-05-25 08:17:38 UTC+0000                                 
+0x000000001c9df700 spoolsv.exe        1216    492 0x00c52240 2016-05-25 08:17:20 UTC+0000                                 
+0x000000001ce84100 conhost.exe        1752    296 0x00c52500 2016-05-25 08:17:25 UTC+0000                                 
+0x000000001ce95380 WmiPrvSE.exe       2324    556 0x00c52260 2016-05-25 08:17:26 UTC+0000                                 
+0x000000001ce9e2c0 unsecapp.exe       2204    556 0x00c524c0 2016-05-25 08:17:26 UTC+0000                                 
+0x000000001cf1b040 SearchIndexer.     2736    492 0x00c522e0 2016-05-25 08:17:34 UTC+0000                                 
+0x000000001cf1f040 dllhost.exe        1324    556 0x00c52360 2016-05-25 08:22:08 UTC+0000                                 
+0x000000001cf8a980 dllhost.exe        2916    492 0x00c52540 2016-05-25 08:17:34 UTC+0000                                 
+0x000000002b008c80 SearchProtocol     1056   2736 0x00c52480 2016-05-25 08:33:07 UTC+0000                                 
+0x00000000310820c0 firefox.exe        3916   1372 0x00c523c0 2016-05-25 08:18:03 UTC+0000                                 
+0x0000000031086c80 Skype.exe          3432   1372 0x00c52580 2016-05-25 08:17:39 UTC+0000                                 
+0x000000003109f400 msdtc.exe          3500    492 0x00c525c0 2016-05-25 08:17:40 UTC+0000                                 
+0x00000000311efc80 conhost.exe        2856   2728 0x00c525e0 2016-05-25 08:22:34 UTC+0000                                 
+0x00000000328cb900 TrustedInstall     1284    492 0x00c526e0 2016-05-25 08:29:05 UTC+0000                                 
+0x0000000035038a80 cmd.exe            2728   1372 0x00c52680 2016-05-25 08:22:34 UTC+0000                                 
+0x0000000043a7d040 DumpIt.exe         1688   1372 0x00c52220 2016-05-25 08:33:08 UTC+0000                                 
+0x0000000059ce7040 AdobeARM.exe       2988    796 0x00c525a0 2016-05-25 08:29:21 UTC+0000                                 
+0x000000005ac047c0 conhost.exe        4016   1688 0x00c52300 2016-05-25 08:33:08 UTC+0000                                 
+0x000000005c405040 TiWorker.exe       3992    556 0x00c526a0 2016-05-25 08:29:06 UTC+0000                                 
+0x000000005e81e640 audiodg.exe        1116    744 0x00c52700 2016-05-25 08:33:06 UTC+0000                                 
+0x0000000063222040 taskhost.exe       2360    796 0x00c526c0 2016-05-25 08:32:20 UTC+0000                                 
+0x0000000065a67a40 svchost.exe        2212    536 0x00c52660 2016-05-25 08:33:33 UTC+0000                                 
+0x000000007d7c1600 svchost.exe         744    492 0x00c52180 2016-05-25 08:17:18 UTC+0000                                 
+0x000000007df18040 SearchFilterHo     2716   2736 0x00c52640 2016-05-25 08:33:07 UTC+0000                                 
+0x000000007ee5e400 System                4      0 0x001a8000 2016-05-25 08:17:15 UTC+0000                                 
+0x000000007eed1c80 services.exe        492    408 0x00c52080 2016-05-25 08:17:17 UTC+0000                                 
+0x000000007ef02040 csrss.exe           400    392 0x00c520a0 2016-05-25 08:17:17 UTC+0000                                 
+0x000000007ef02440 wininit.exe         408    340 0x00c520c0 2016-05-25 08:17:17 UTC+0000                                 
+0x000000007ef10c80 winlogon.exe        436    392 0x00c52040 2016-05-25 08:17:17 UTC+0000                                 
+0x000000007ef4a780 svchost.exe        2772    492 0x00c52320 2016-05-25 08:17:34 UTC+0000
+***********************************************************************************************************
+pslist - κάνει λιστα όλες τις διεργασίες . Ψάχνουμε κάποια νόμιμη διεργασία αν έχει υποστεί
+code injection ή hooking
+***********************************************************************************************************
+Offset(V)  Name                    PID   PPID   Thds     Hnds   Sess  Wow64 Start                                                    
+---------- -------------------- ------ ------ ------ -------- ------ ------ ------------------------------ 
+0x8325e400 System                    4      0     87        0 ------      0 2016-05-25 08:17:15 UTC+0000                                 
+0x8ae50040 smss.exe                256      4      2        0 ------      0 2016-05-25 08:17:15 UTC+0000                                 
+0x8af4bc80 csrss.exe               348    340      9        0      0      0 2016-05-25 08:17:16 UTC+0000                                 
+0x83302040 csrss.exe               400    392      9        0      1      0 2016-05-25 08:17:17 UTC+0000                                 
+0x83302440 wininit.exe             408    340      1        0      0      0 2016-05-25 08:17:17 UTC+0000                                 
+0x83310c80 winlogon.exe            436    392      5        0      1      0 2016-05-25 08:17:17 UTC+0000                                 
+0x832d1c80 services.exe            492    408      5        0      0      0 2016-05-25 08:17:17 UTC+0000                                 
+0x90d78040 lsass.exe               500    408      6        0      0      0 2016-05-25 08:17:17 UTC+0000                                 
+0x90da6c80 svchost.exe             556    492     11        0      0      0 2016-05-25 08:17:18 UTC+0000                                 
+0x90dab640 svchost.exe             584    492     10        0      0      0 2016-05-25 08:17:18 UTC+0000                                 
+0x90ddac80 dwm.exe                 700    436      8        0      1      0 2016-05-25 08:17:18 UTC+0000                                 
+0x89fc1600 svchost.exe             744    492     23        0      0      0 2016-05-25 08:17:18 UTC+0000                                 
+0x89173040 svchost.exe             796    492     59        0      0      0 2016-05-25 08:17:18 UTC+0000                                 
+0x891806c0 svchost.exe             836    492     34        0      0      0 2016-05-25 08:17:19 UTC+0000                                 
+0x89198a80 svchost.exe             912    492     16        0      0      0 2016-05-25 08:17:19 UTC+0000                                 
+0x891cb640 svchost.exe            1040    492     35        0      0      0 2016-05-25 08:17:19 UTC+0000                                 
+0x8f432700 spoolsv.exe            1216    492      8        0      0      0 2016-05-25 08:17:20 UTC+0000                                 
+0x89077c40 svchost.exe            1268    492     23        0      0      0 2016-05-25 08:17:20 UTC+0000                                 
+0x8907fc80 taskhostex.exe         1276    796      9        0      1      0 2016-05-25 08:17:20 UTC+0000                                 
+0x890a58c0 explorer.exe           1372   1320     69        0      1      0 2016-05-25 08:17:20 UTC+0000                                 
+0x8915f840 armsvc.exe             1724    492      2        0      0      0 2016-05-25 08:17:22 UTC+0000                                 
+0x8916f600 svchost.exe            1756    492     12        0      0      0 2016-05-25 08:17:22 UTC+0000                                 
+0x8f49d800 dwmss.exe              1888    492      8        0      0      0 2016-05-25 08:17:23 UTC+0000                                 
+0x8f49fa00 dasHost.exe            1896    912      2        0      0      0 2016-05-25 08:17:23 UTC+0000                                 
+0x8f4ef140 powershell.exe          296     56      5        0      0      0 2016-05-25 08:17:24 UTC+0000                                 
+0x8f499b80 vmtoolsd.exe            344    492      8        0      0      0 2016-05-25 08:17:24 UTC+0000                                 
+0x8f550580 MsMpEng.exe             536    492     22        0      0      0 2016-05-25 08:17:24 UTC+0000                                 
+0x8f577040 wlms.exe                948    492      2        0      0      0 2016-05-25 08:17:24 UTC+0000                                 
+0xa9a84100 conhost.exe            1752    296      2        0      0      0 2016-05-25 08:17:25 UTC+0000                                 
+0xa9a9e2c0 unsecapp.exe           2204    556      1        0      0      0 2016-05-25 08:17:26 UTC+0000                                 
+0xa9a95380 WmiPrvSE.exe           2324    556      4        0      0      0 2016-05-25 08:17:26 UTC+0000                                 
+0x8f482100 NisSrv.exe             2572    492      7        0      0      0 2016-05-25 08:17:33 UTC+0000                                 
+0xa9b1b040 SearchIndexer.         2736    492     15        0      0      0 2016-05-25 08:17:34 UTC+0000                                 
+0x8334a780 svchost.exe            2772    492     22        0      0      0 2016-05-25 08:17:34 UTC+0000                                 
+0xa9b8a980 dllhost.exe            2916    492     10        0      0      0 2016-05-25 08:17:34 UTC+0000                                 
+0x8f535040 vmtoolsd.exe           3416   1372      6        0      1      0 2016-05-25 08:17:38 UTC+0000                                 
+0xada86c80 Skype.exe              3432   1372     31        0      1      0 2016-05-25 08:17:39 UTC+0000                                 
+0xada9f400 msdtc.exe              3500    492      9        0      0      0 2016-05-25 08:17:40 UTC+0000                                 
+0xada820c0 firefox.exe            3916   1372     41        0      1      0 2016-05-25 08:18:03 UTC+0000                                 
+0xa9b1f040 dllhost.exe            1324    556      3        0      1      0 2016-05-25 08:22:08 UTC+0000                                 
+0xb5638a80 cmd.exe                2728   1372      1        0      1      0 2016-05-25 08:22:34 UTC+0000                                 
+0xadbefc80 conhost.exe            2856   2728      2        0      1      0 2016-05-25 08:22:34 UTC+0000                                 
+0xb194c900 TrustedInstall         1284    492      5        0      0      0 2016-05-25 08:29:05 UTC+0000                                 
+0xb196b040 TiWorker.exe           3992    556      6        0      0      0 2016-05-25 08:29:06 UTC+0000                                 
+0xb19a8040 AdobeARM.exe           2988    796      4        0      1      0 2016-05-25 08:29:21 UTC+0000                                 
+0xc2a92040 taskhost.exe           2360    796     13        0      0      0 2016-05-25 08:32:20 UTC+0000                                 
+0xd0c85640 audiodg.exe            1116    744      6        0      0      0 2016-05-25 08:33:06 UTC+0000                                 
+0xd0cc5c80 SearchProtocol         1056   2736      6        0      0      0 2016-05-25 08:33:07 UTC+0000                                 
+0x89718040 SearchFilterHo         2716   2736      5        0      0      0 2016-05-25 08:33:07 UTC+0000                                 
+0xd0c82040 DumpIt.exe             1688   1372      1        0      1      0 2016-05-25 08:33:08 UTC+0000                                 
+0xc2acc7c0 conhost.exe            4016   1688      2        0      1      0 2016-05-25 08:33:08 UTC+0000                                 
+0xd0c10a40 svchost.exe            2212    536      1        0 ------      0 2016-05-25 08:33:33 UTC+0000  
+***********************************************************************************************************
+pstree - Ίδια αποτελέσματα με την pslist αλλά σε δενδρική μορφή , όπου μπορούμε να διακρίνουμε σχέσεις
+πατέρα-παιδιού των διεργασιών
+***********************************************************************************************************                              
+
+Name                                                  Pid   PPid   Thds   Hnds Time
+-------------------------------------------------- ------ ------ ------ ------ ----
+ 0x8325e400:System                                      4      0     87      0 2016-05-25 08:17:15 UTC+0000
+. 0x8ae50040:smss.exe                                 256      4      2      0 2016-05-25 08:17:15 UTC+0000
+ 0x83302440:wininit.exe                               408    340      1      0 2016-05-25 08:17:17 UTC+0000
+. 0x90d78040:lsass.exe                                500    408      6      0 2016-05-25 08:17:17 UTC+0000
+. 0x832d1c80:services.exe                             492    408      5      0 2016-05-25 08:17:17 UTC+0000
+.. 0x891cb640:svchost.exe                            1040    492     35      0 2016-05-25 08:17:19 UTC+0000
+.. 0xada9f400:msdtc.exe                              3500    492      9      0 2016-05-25 08:17:40 UTC+0000
+.. 0x89198a80:svchost.exe                             912    492     16      0 2016-05-25 08:17:19 UTC+0000
+... 0x8f49fa00:dasHost.exe                           1896    912      2      0 2016-05-25 08:17:23 UTC+0000
+.. 0x8f499b80:vmtoolsd.exe                            344    492      8      0 2016-05-25 08:17:24 UTC+0000
+.. 0xb194c900:TrustedInstall                         1284    492      5      0 2016-05-25 08:29:05 UTC+0000
+.. 0x89173040:svchost.exe                             796    492     59      0 2016-05-25 08:17:18 UTC+0000
+... 0xc2a92040:taskhost.exe                          2360    796     13      0 2016-05-25 08:32:20 UTC+0000
+... 0xb19a8040:AdobeARM.exe                          2988    796      4      0 2016-05-25 08:29:21 UTC+0000
+... 0x8907fc80:taskhostex.exe                        1276    796      9      0 2016-05-25 08:17:20 UTC+0000
+.. 0x90da6c80:svchost.exe                             556    492     11      0 2016-05-25 08:17:18 UTC+0000
+... 0xa9a9e2c0:unsecapp.exe                          2204    556      1      0 2016-05-25 08:17:26 UTC+0000
+... 0xa9a95380:WmiPrvSE.exe                          2324    556      4      0 2016-05-25 08:17:26 UTC+0000
+... 0xb196b040:TiWorker.exe                          3992    556      6      0 2016-05-25 08:29:06 UTC+0000
+... 0xa9b1f040:dllhost.exe                           1324    556      3      0 2016-05-25 08:22:08 UTC+0000
+.. 0xa9b1b040:SearchIndexer.                         2736    492     15      0 2016-05-25 08:17:34 UTC+0000
+... 0xd0cc5c80:SearchProtocol                        1056   2736      6      0 2016-05-25 08:33:07 UTC+0000
+... 0x89718040:SearchFilterHo                        2716   2736      5      0 2016-05-25 08:33:07 UTC+0000
+.. 0x8f577040:wlms.exe                                948    492      2      0 2016-05-25 08:17:24 UTC+0000
+.. 0x8f432700:spoolsv.exe                            1216    492      8      0 2016-05-25 08:17:20 UTC+0000
+.. 0x891806c0:svchost.exe                             836    492     34      0 2016-05-25 08:17:19 UTC+0000
+.. 0x90dab640:svchost.exe                             584    492     10      0 2016-05-25 08:17:18 UTC+0000
+.. 0x8f482100:NisSrv.exe                             2572    492      7      0 2016-05-25 08:17:33 UTC+0000
+.. 0x8334a780:svchost.exe                            2772    492     22      0 2016-05-25 08:17:34 UTC+0000
+.. 0x8916f600:svchost.exe                            1756    492     12      0 2016-05-25 08:17:22 UTC+0000
+.. 0x8f49d800:dwmss.exe                              1888    492      8      0 2016-05-25 08:17:23 UTC+0000
+.. 0xa9b8a980:dllhost.exe                            2916    492     10      0 2016-05-25 08:17:34 UTC+0000
+.. 0x8f550580:MsMpEng.exe                             536    492     22      0 2016-05-25 08:17:24 UTC+0000
+... 0xd0c10a40:svchost.exe                           2212    536      1      0 2016-05-25 08:33:33 UTC+0000
+.. 0x89fc1600:svchost.exe                             744    492     23      0 2016-05-25 08:17:18 UTC+0000
+... 0xd0c85640:audiodg.exe                           1116    744      6      0 2016-05-25 08:33:06 UTC+0000
+.. 0x8915f840:armsvc.exe                             1724    492      2      0 2016-05-25 08:17:22 UTC+0000
+.. 0x89077c40:svchost.exe                            1268    492     23      0 2016-05-25 08:17:20 UTC+0000
+ 0x8af4bc80:csrss.exe                                 348    340      9      0 2016-05-25 08:17:16 UTC+0000
+ 0x890a58c0:explorer.exe                             1372   1320     69      0 2016-05-25 08:17:20 UTC+0000
+. 0xd0c82040:DumpIt.exe                              1688   1372      1      0 2016-05-25 08:33:08 UTC+0000
+.. 0xc2acc7c0:conhost.exe                            4016   1688      2      0 2016-05-25 08:33:08 UTC+0000
+. 0xb5638a80:cmd.exe                                 2728   1372      1      0 2016-05-25 08:22:34 UTC+0000
+.. 0xadbefc80:conhost.exe                            2856   2728      2      0 2016-05-25 08:22:34 UTC+0000
+. 0xada86c80:Skype.exe                               3432   1372     31      0 2016-05-25 08:17:39 UTC+0000
+. 0xada820c0:firefox.exe                             3916   1372     41      0 2016-05-25 08:18:03 UTC+0000
+. 0x8f535040:vmtoolsd.exe                            3416   1372      6      0 2016-05-25 08:17:38 UTC+0000
+ 0x8f4ef140:powershell.exe                            296     56      5      0 2016-05-25 08:17:24 UTC+0000
+. 0xa9a84100:conhost.exe                             1752    296      2      0 2016-05-25 08:17:25 UTC+0000
+ 0x83310c80:winlogon.exe                              436    392      5      0 2016-05-25 08:17:17 UTC+0000
+. 0x90ddac80:dwm.exe                                  700    436      8      0 2016-05-25 08:17:18 UTC+0000
+ 0x83302040:csrss.exe                                 400    392      9      0 2016-05-25 08:17:17 UTC+0000
+ ***********************************************************************************************************
+psxview - εντοπίζει τις διεργασίες που χρησιμοποιούν  alternate process listings, έτσι ώστε να συσχετίσουμε τις
+διαφορετικές πηγές πληροφοριών και να φανερώσουμε κακόβουλες ενέργειες
+***********************************************************************************************************
+Offset(P)  Name                    PID pslist psscan thrdproc pspcid csrss session deskthrd ExitTime
+---------- -------------------- ------ ------ ------ -------- ------ ----- ------- -------- --------
+0x7eed1c80 services.exe            492 True   True   False    False  True  True    False    
+0x1ce95380 WmiPrvSE.exe           2324 True   True   False    False  True  True    False    
+0x08978040 lsass.exe               500 True   True   False    False  True  True    False    
+0x7df18040 SearchFilterHo         2716 True   True   False    False  True  True    False    
+0x310820c0 firefox.exe            3916 True   True   False    False  True  True    False    
+0x13daec80 taskhostex.exe         1276 True   True   False    False  True  True    False    
+0x17a6d100 NisSrv.exe             2572 True   True   False    False  True  True    False    
+0x1bb7f140 powershell.exe          296 True   True   False    False  True  True    False    
+0x7ef10c80 winlogon.exe            436 True   True   False    False  True  True    False    
+0x5e81e640 audiodg.exe            1116 True   True   False    False  True  True    False    
+0x7d7c1600 svchost.exe             744 True   True   False    False  True  True    False    
+0x1cf1b040 SearchIndexer.         2736 True   True   False    False  True  True    False    
+0x2b008c80 SearchProtocol         1056 True   True   False    False  True  True    False    
+0x1ce9e2c0 unsecapp.exe           2204 True   True   False    False  True  True    False    
+0x43a7d040 DumpIt.exe             1688 True   True   False    False  True  True    False    
+0x1cf1f040 dllhost.exe            1324 True   True   False    False  True  True    False    
+0x3109f400 msdtc.exe              3500 True   True   False    False  True  True    False    
+0x31086c80 Skype.exe              3432 True   True   False    False  True  True    False    
+0x63222040 taskhost.exe           2360 True   True   False    False  True  True    False    
+0x1078f580 MsMpEng.exe             536 True   True   False    False  True  True    False    
+0x15a3d600 svchost.exe            1756 True   True   False    False  True  True    False    
+0x0dd7d640 svchost.exe            1040 True   True   False    False  True  True    False    
+0x1c0c4040 vmtoolsd.exe           3416 True   True   False    False  True  True    False    
+0x0a0236c0 svchost.exe             836 True   True   False    False  True  True    False    
+0x5c405040 TiWorker.exe           3992 True   True   False    False  True  True    False    
+0x1c9df700 spoolsv.exe            1216 True   True   False    False  True  True    False    
+0x7ef02440 wininit.exe             408 True   True   False    False  True  True    False    
+0x35038a80 cmd.exe                2728 True   True   False    False  True  True    False    
+0x7ef4a780 svchost.exe            2772 True   True   False    False  True  True    False    
+0x5ac047c0 conhost.exe            4016 True   True   False    False  True  True    False    
+0x59ce7040 AdobeARM.exe           2988 True   True   False    False  True  True    False    
+0x18443800 dwmss.exe              1888 True   True   False    False  True  True    False    
+0x15dda840 armsvc.exe             1724 True   True   False    False  True  True    False    
+0x020458c0 explorer.exe           1372 True   True   False    False  True  True    False    
+0x328cb900 TrustedInstall         1284 True   True   False    False  True  True    False    
+0x1cf8a980 dllhost.exe            2916 True   True   False    False  True  True    False    
+0x18c46a00 dasHost.exe            1896 True   True   False    False  True  True    False    
+0x1ce84100 conhost.exe            1752 True   True   False    False  True  True    False    
+0x311efc80 conhost.exe            2856 True   True   False    False  True  True    False    
+0x0e41da80 svchost.exe             912 True   True   False    False  True  True    False    
+0x16bce040 wlms.exe                948 True   True   False    False  True  True    False    
+0x18a89b80 vmtoolsd.exe            344 True   True   False    False  True  True    False    
+0x0c1e2c40 svchost.exe            1268 True   True   False    False  True  True    False    
+0x089a6c80 svchost.exe             556 True   True   False    False  True  True    False    
+0x089ab640 svchost.exe             584 True   True   False    False  True  True    False    
+0x09d74040 svchost.exe             796 True   True   False    False  True  True    False    
+0x1558d100 dllhost.exe            2944 False  True   False    False  True  False   False    
+0x089dac80 dwm.exe                 700 True   True   False    False  True  True    False    
+0x7ee5e400 System                    4 True   True   False    False  False False   False    
+0x7ef02040 csrss.exe               400 True   True   False    False  False True    False    
+0x00c50040 smss.exe                256 True   True   False    False  False False   False    
+0x65a67a40 svchost.exe            2212 True   True   False    False  False True    False    
+0x00d4bc80 csrss.exe               348 True   True   False    False  False True    False 
+***********************************************************************************************************   
+netscan -Ψάχνουμε να βρούμε τισ  _TCP_ENDPOINT, _TCP_LISTENER, και _UDP_ENDPOINT δομές στην μνήμη
+***********************************************************************************************************
+
+Offset(P)          Proto    Local Address                  Foreign Address      State            Pid      Owner          Created
+0x1ccac68          UDPv4    147.102.216.217:512            *:*                                   4        System         2016-05-25 08:17:20 UTC+0000
+0x89a3b58          TCPv4    0.0.0.0:135                    0.0.0.0:0            LISTENING        584      svchost.exe    
+0x89a3b58          TCPv6    :::135                         :::0                 LISTENING        584      svchost.exe    
+0x89b5760          TCPv4    0.0.0.0:135                    0.0.0.0:0            LISTENING        584      svchost.exe    
+0x89bcc30          TCPv4    0.0.0.0:49152                  0.0.0.0:0            LISTENING        408      wininit.exe    
+0x89bcc30          TCPv6    :::49152                       :::0                 LISTENING        408      wininit.exe    
+0x89bcf50          TCPv4    0.0.0.0:49152                  0.0.0.0:0            LISTENING        408      wininit.exe    
+0x89df3c8          TCPv4    147.102.216.217:49308          -:80                 ESTABLISHED      -1                      
+0x9b724d0          TCPv4    0.0.0.0:49153                  0.0.0.0:0            LISTENING        744      svchost.exe    
+0x9b724d0          TCPv6    :::49153                       :::0                 LISTENING        744      svchost.exe    
+0x9b72f10          TCPv4    0.0.0.0:49153                  0.0.0.0:0            LISTENING        744      svchost.exe    
+0xc1fa968          UDPv4    127.0.0.1:512                  *:*                                   2772     svchost.exe    2016-05-25 08:17:35 UTC+0000
+0xd6b3f50          TCPv4    0.0.0.0:49154                  0.0.0.0:0            LISTENING        796      svchost.exe    
+0x117896b8         TCPv4    0.0.0.0:49154                  0.0.0.0:0            LISTENING        796      svchost.exe    
+0x117896b8         TCPv6    :::49154                       :::0                 LISTENING        796      svchost.exe    
+0x12bed458         UDPv4    147.102.216.217:512            *:*                                   4        System         2016-05-25 08:17:20 UTC+0000
+0x12bedf00         TCPv4    147.102.216.217:139            0.0.0.0:0            LISTENING        4        System         
+0x12f82f50         TCPv4    0.0.0.0:49155                  0.0.0.0:0            LISTENING        1216     spoolsv.exe    
+0x12fd75d0         TCPv4    0.0.0.0:49155                  0.0.0.0:0            LISTENING        1216     spoolsv.exe    
+0x12fd75d0         TCPv6    :::49155                       :::0                 LISTENING        1216     spoolsv.exe    
+0x13db53f0         UDPv4    147.102.216.217:512            *:*                                   2772     svchost.exe    2016-05-25 08:17:35 UTC+0000
+0x141c2498         UDPv4    127.0.0.1:512                  *:*                                   2772     svchost.exe    2016-05-25 08:17:35 UTC+0000
+0x141c2610         UDPv4    147.102.216.217:512            *:*                                   2772     svchost.exe    2016-05-25 08:17:35 UTC+0000
+0x1433cc90         UDPv4    0.0.0.0:5888                   *:*                                   1040     svchost.exe    2016-05-25 08:17:40 UTC+0000
+0x1433cc90         UDPv6    :::5888                        *:*                                   1040     svchost.exe    2016-05-25 08:17:40 UTC+0000
+0x16ca7958         TCPv4    0.0.0.0:49158                  0.0.0.0:0            LISTENING        492      services.exe   
+0x16ca7958         TCPv6    :::49158                       :::0                 LISTENING        492      services.exe   
+0x1ce490c8         UDPv6    ::1:5888                       *:*                                   2772     svchost.exe    2016-05-25 08:17:35 UTC+0000
+0x1ce5cf48         UDPv4    0.0.0.0:0                      *:*                                   -1                      
+0x1ce5cf48         UDPv6    :::0                           *:*                                   -1                      
+0x1cf0ddc8         UDPv4    0.0.0.0:512                    *:*                                   1040     svchost.exe    2016-05-25 08:17:36 UTC+0000
+0x1cf78310         UDPv6    fe80::646a:af85:8a97:f27:5888  *:*                                   2772     svchost.exe    2016-05-25 08:17:35 UTC+0000
+0x1cfe4e28         UDPv6    ::1:5888                       *:*                                   2772     svchost.exe    2016-05-25 08:17:35 UTC+0000
+0x1cfe5c40         UDPv6    fe80::646a:af85:8a97:f27:5888  *:*                                   2772     svchost.exe    2016-05-25 08:17:35 UTC+0000
+0x1ce36530         TCPv4    0.0.0.0:49158                  0.0.0.0:0            LISTENING        492      services.exe   
+0x1ce62240         TCPv4    0.0.0.0:445                    0.0.0.0:0            LISTENING        4        System         
+0x1ce62240         TCPv6    :::445                         :::0                 LISTENING        4        System         
+0x1cfeddd0         TCPv4    0.0.0.0:3389                   0.0.0.0:0            LISTENING        1040     svchost.exe    
+0x1cfeddd0         TCPv6    :::3389                        :::0                 LISTENING        1040     svchost.exe    
+0x1cff5008         TCPv4    0.0.0.0:3389                   0.0.0.0:0            LISTENING        1040     svchost.exe    
+0x1cf1fbe8         TCPv4    147.102.216.217:49288          -:443                CLOSED           -1                      
+0x21afd008         TCPv4    147.102.216.217:49320          -:2869               ESTABLISHED      -1                      
+0x235b1c60         UDPv4    0.0.0.0:5888                   *:*                                   1040     svchost.exe    2016-05-25 08:17:36 UTC+0000
+0x235b1c60         UDPv6    :::5888                        *:*                                   1040     svchost.exe    2016-05-25 08:17:36 UTC+0000
+0x24dd6958         TCPv4    147.102.216.217:49318          -:2869               ESTABLISHED      -1                      
+0x273182d8         UDPv6    fe80::8fc:666:6c99:2726:5888   *:*                                   744      svchost.exe    2016-05-25 08:31:55 UTC+0000
+0x2b0b7550         TCPv6    fe80::646a:af85:8a97:f27:49317 -:2869               ESTABLISHED      -1                      
+0x31061550         UDPv4    0.0.0.0:0                      *:*                                   3432     Skype.exe      2016-05-25 08:17:51 UTC+0000
+0x310d4188         UDPv4    0.0.0.0:512                    *:*                                   1040     svchost.exe    2016-05-25 08:17:40 UTC+0000
+0x31106408         UDPv4    0.0.0.0:0                      *:*                                   1040     svchost.exe    2016-05-25 08:17:40 UTC+0000
+0x31106408         UDPv6    :::0                           *:*                                   1040     svchost.exe    2016-05-25 08:17:40 UTC+0000
+0x31126d60         UDPv4    127.0.0.1:512                  *:*                                   3432     Skype.exe      2016-05-25 08:17:50 UTC+0000
+0x31174950         TCPv4    127.0.0.1:49195                -:49196              ESTABLISHED      -1                      
+0x311bd410         TCPv6    2001:648:2000:d8:dc73:8a3e:8156:5d82:49303 -:80     CLOSED           -1                      
+0x311be570         TCPv4    147.102.216.217:49312          -:443                ESTABLISHED      -1                      
+0x350d54a8         UDPv4    0.0.0.0:512                    *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x3513cd58         UDPv4    0.0.0.0:0                      *:*                                   1040     svchost.exe    2016-05-25 08:29:07 UTC+0000
+0x3513cd58         UDPv6    :::0                           *:*                                   1040     svchost.exe    2016-05-25 08:29:07 UTC+0000
+0x350d8778         TCPv4    147.102.216.217:49326          -:139                CLOSED           -1                      
+0x39452340         TCPv4    127.0.0.1:49196                -:49195              ESTABLISHED      -1                      
+0x423e1008         TCPv6    fe80::646a:af85:8a97:f27:49319 -:2869               ESTABLISHED      -1                      
+0x44664310         TCPv4    147.102.216.217:49324          -:139                CLOSED           -1                      
+0x4ad64180         TCPv4    147.102.216.217:49327          -:139                CLOSED           -1                      
+0x4ad64d58         TCPv4    147.102.216.217:49315          -:9000               CLOSED           -1                      
+0x4d0e2648         TCPv4    147.102.216.217:49331          -:5357               CLOSED           -1                      
+0x4f972a88         TCPv6    fe80::646a:af85:8a97:f27:49321 -:2869               ESTABLISHED      -1                      
+0x693fca70         TCPv6    2001:648:2000:d8:dc73:8a3e:8156:5d82:49305 -:80     ESTABLISHED      -1                      
+0x78bdf668         TCPv4    0.0.0.0:49157                  0.0.0.0:0            LISTENING        500      lsass.exe      
+0x7d741750         TCPv4    147.102.216.217:49306          -:80                 CLOSED           -1                      
+0x7decee90         UDPv4    0.0.0.0:5888                   *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x7decee90         UDPv6    :::5888                        *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x7dede620         UDPv4    0.0.0.0:512                    *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x7dee9b10         UDPv4    0.0.0.0:512                    *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x7deeaeb8         UDPv4    0.0.0.0:5888                   *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x7deeaeb8         UDPv6    :::5888                        *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x7deeb858         UDPv4    0.0.0.0:5888                   *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x7deeb858         UDPv6    :::5888                        *:*                                   836      svchost.exe    2016-05-25 08:32:43 UTC+0000
+0x7de5e160         TCPv4    0.0.0.0:49157                  0.0.0.0:0            LISTENING        500      lsass.exe      
+0x7de5e160         TCPv6    :::49157                       :::0                 LISTENING        500      lsass.exe      
+0x7de4b008         TCPv4    147.102.216.217:49287          -:443                CLOSED           -1 
