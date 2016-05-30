@@ -25,21 +25,22 @@ Connection: keep-alive
 Από τα 4 emails που μας δίνονται, παρατηρούμε σημεία με κωδικοποιημένη  πληροφορία Base64.
 Αποκωδικοποιούμε τα σημεία αυτά με Base64 και παίρνουμε σαν έξοδο τα παρακάτω: 
 
-1) Το email που στάλθηκε στις Fri Feb 29 03:29:15 2016 περιέχει την πληροφορία:
+1) Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_1.txt) που στάλθηκε στις **Fri Feb 29 03:29:15 2016** περιέχει την πληροφορία:
 Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta (7) synolika "stoixeia-tmimata" (parts) ta opoia tha sas dosoun ti lysi tou epeisodiou. | I ekseliksi tou einai ayksanomenis dyskolias kai xrisimopoiithikan ergaleia kai texnikes pou kalyptoun to megalytero fasma tis steganographias kai ton texnologion pou xrisimopoiountai. | Kata ti diarkeia tis askisis tha dinontai, efoson zitithoun, hints pou tha voithisoun stin ekseliksi tou epeisodiou. | Mporeite na ksekinisete tin epilysi tou epeisodiou arxizontas apo to 2o mail.%PDF-1.5 
 Οι επόμενες γραμμές αποτελούσαν ένα κρατικό έγγραφο σε μορφή PDF: https://drive.google.com/open?id=0B3Mkr-G7WiW3MGJ2c1FDcDd6SnM
-2)Το email που στάλθηκε στις Thu Mar 10 03:30:33 2016 περιέχει 2 εικόνες JPG: 
+
+2)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_2.txt) που στάλθηκε στις **Thu Mar 10 03:30:33 2016** περιέχει 2 εικόνες JPG: 
 Image1: https://drive.google.com/open?id=0B3Mkr-G7WiW3LWp1UTY2SUlhWU0
 Image2: https://drive.google.com/open?id=0B3Mkr-G7WiW3SkRhQUpXTkxkbEE
 Παρατηρούμε ότι η 1η εικόνα περιέχει ΚΑΙ ΑΥΤΗ Base64 κωδικοποίηση σε ένα σημείο της!
 Επίσης, το μέγεθος της 2ης εικόνας είναι σχετικά μεγάλο. Αυτό μας δημιούργησε υποψίες για κρυφά data μέσα στην εικόνα.
 
-3)Το email που στάλθηκε στις Wed Mar 18 03:32:47 2016 περιέχει την JPG εικόνα: https://drive.google.com/open?id=0B3Mkr-G7WiW3Nmx6V3F4WkdIS2M
+3)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_3.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει την JPG εικόνα: https://drive.google.com/open?id=0B3Mkr-G7WiW3Nmx6V3F4WkdIS2M
 Αλλάζοντας την κατάληξη της εικόνας αυτή σε RAR παρατηρούμε ότι μέσα της περιέχει μια εικόνα με όνομα inception_movie_poster_high_definition.jpg https://drive.google.com/open?id=0B3Mkr-G7WiW3VUc5ck5sbWhSWG8  
 
-4)Το email που στάλθηκε στις Wed Mar 18 03:32:47 2016 περιέχει την cyber.jpg εικόνα: https://drive.google.com/open?id=0B3Mkr-G7WiW3Mk8wOWpSc29adjg
+4)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_4.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει την cyber.jpg εικόνα: https://drive.google.com/open?id=0B3Mkr-G7WiW3Mk8wOWpSc29adjg
 
-Όλα τα παραπάνω email περιείχαν και ενοχοποιητικά μηνύματα, όπως το email4 που ειδοποιεί τον παραλήπτη ότι η ασφάλεια έχει γίνει αυστηρότερη και πρέπει να αλλάξει μορφή η επικοινωνία τους.
+Όλα τα παραπάνω email περιείχαν και ενοχοποιητικά μηνύματα, όπως το 4o email που ειδοποιεί τον παραλήπτη ότι η ασφάλεια έχει γίνει αυστηρότερη και πρέπει να αλλάξει μορφή η επικοινωνία τους.
 
 Γνωρίζοντας ότι ο χρήστης-στόχος έχει στην κατοχή του το SilentEye εκτελούμε στεγανάλυση σε όλες τις εικόνες αποκρυπτογραφώντας με το προεπιλεγμένο password το “SilentEye”.
 Από την εικόνα IMAGE_1 παίρνουμε ένα text αρχείο το οποίο μας βοηθάει στην ανακάλυψη του ProductSales-students.part2-rar.axx, το οποίο είναι κρυμμένο στην image2 από το ίδιο email.
