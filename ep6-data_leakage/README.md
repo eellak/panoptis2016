@@ -26,8 +26,8 @@ Connection: keep-alive
 Αποκωδικοποιούμε τα σημεία αυτά με Base64 και παίρνουμε σαν έξοδο τα παρακάτω: 
 
 1) Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_1.txt) που στάλθηκε στις **Fri Feb 29 03:29:15 2016** περιέχει την πληροφορία:
-Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta (7) synolika "stoixeia-tmimata" (parts) ta opoia tha sas dosoun ti lysi tou epeisodiou. | I ekseliksi tou einai ayksanomenis dyskolias kai xrisimopoiithikan ergaleia kai texnikes pou kalyptoun to megalytero fasma tis steganographias kai ton texnologion pou xrisimopoiountai. | Kata ti diarkeia tis askisis tha dinontai, efoson zitithoun, hints pou tha voithisoun stin ekseliksi tou epeisodiou. | Mporeite na ksekinisete tin epilysi tou epeisodiou arxizontas apo to 2o mail.%PDF-1.5 
-Οι επόμενες γραμμές αποτελούσαν ένα κρατικό έγγραφο σε μορφή PDF: https://drive.google.com/open?id=0B3Mkr-G7WiW3MGJ2c1FDcDd6SnM
+__ Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta (7) synolika "stoixeia-tmimata" (parts) ta opoia tha sas dosoun ti lysi tou epeisodiou. | I ekseliksi tou einai ayksanomenis dyskolias kai xrisimopoiithikan ergaleia kai texnikes pou kalyptoun to megalytero fasma tis steganographias kai ton texnologion pou xrisimopoiountai. | Kata ti diarkeia tis askisis tha dinontai, efoson zitithoun, hints pou tha voithisoun stin ekseliksi tou epeisodiou. | Mporeite na ksekinisete tin epilysi tou epeisodiou arxizontas apo to 2o mail.%PDF-1.5 __
+Οι επόμενες γραμμές αποτελούν ένα ![κρατικό έγγραφο σε μορφή PDF](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/PDF_apo_email1.pdf) ή ![GoogleDrive](https://drive.google.com/open?id=0B3Mkr-G7WiW3MGJ2c1FDcDd6SnM)
 
 2)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_2.txt) που στάλθηκε στις **Thu Mar 10 03:30:33 2016** περιέχει 2 εικόνες JPG: 
 Image1: https://drive.google.com/open?id=0B3Mkr-G7WiW3LWp1UTY2SUlhWU0
