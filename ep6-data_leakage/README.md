@@ -30,7 +30,9 @@ __ Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete ept
 Οι επόμενες γραμμές αποτελούν ένα ![κρατικό έγγραφο σε μορφή PDF](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/PDF_apo_email1.pdf) 
 
 2)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_2.txt) που στάλθηκε στις **Thu Mar 10 03:30:33 2016** περιέχει 2 εικόνες JPG: 
+
 Image1:(https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/image1_apo_email2.jpg)
+
 Image2:(https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/image2_apo_email2.jpg)
 Παρατηρούμε ότι η 1η εικόνα περιέχει ΚΑΙ ΑΥΤΗ Base64 κωδικοποίηση σε ένα σημείο της!
 Επίσης, το μέγεθος της 2ης εικόνας είναι σχετικά μεγάλο. Αυτό μας δημιούργησε υποψίες για κρυφά data μέσα στην εικόνα.
