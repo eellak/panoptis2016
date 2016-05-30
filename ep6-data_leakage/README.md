@@ -7,11 +7,11 @@ AxCrypt (για κρυπτογράφηση αρχείων)
 SilentEye και Stegomagic (λογισμικά στεγανογραφίας)
 Επίσης, παρατηρούμε ότι έχει πραγματοποιήσει Google search για οδηγίες στεγανογράρφισης και απόκρυψης δεδομένων σε αρχεία ήχου και εικόνας. ![Εδώ](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/suggestions.JPG?raw=true)
 
-Ακόμα φαίνεται ότι ο ύποπτος χρήστης έχει ανεβάσει στο uptobox.com ένα αρχείο με όνομα ProductSales-students.part1-rar.axx το οποίο είναι κρυπτογραφημένο με το λογισμικό Axcrypt. Από περεταίρω αναζήτηση, μαθαίνουμε ότι το λογισμικό αυτό κωδικοποιεί αρχεία χρησιμοποιώντας “κλειδιά” (keyfiles), τα οποία πρέπει να ανακτήσει όποιος επιθυμεί να το αποκωδικοποιήσει. Επομένως επικεντρωνόμαστε στην ανάκτηση των keyfiles.
+Ακόμα φαίνεται ότι ο ύποπτος χρήστης έχει ανεβάσει στο uptobox.com ένα αρχείο με όνομα [ProductSales-students.part1-rar.axx](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/ProductSales-students.part1-rar.axx) το οποίο είναι κρυπτογραφημένο με το λογισμικό Axcrypt. Από περεταίρω αναζήτηση, μαθαίνουμε ότι το λογισμικό αυτό κωδικοποιεί αρχεία χρησιμοποιώντας “κλειδιά” (keyfiles), τα οποία πρέπει να ανακτήσει όποιος επιθυμεί να το αποκωδικοποιήσει. Επομένως επικεντρωνόμαστε στην ανάκτηση των keyfiles.
 
 **Πληροφορίες υπόπτου:**
 
-IP Address   : 192.168.66.207 , MAC-Address: cadmusco_1c:c4:44 08:00:27:1c:c4:44
+IP Address   : __192.168.66.207__ , MAC-Address: __cadmusco_1c:c4:44 08:00:27:1c:c4:44__
 
 [#GET /projects/silenteye/files/Application/0.4/silenteye-0.4.1-win32.exe/download HTTP/1.1
 Host: sourceforge.net
@@ -46,7 +46,7 @@ _Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta 
 Από την εικόνα Image1 παίρνουμε ένα text αρχείο ([__keyfile__](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/Key_File1.txt)) το οποίο μας βοηθάει στην αποκρυπτογράφηση του [__ProductSales-students.part2-rar.axx__](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/ProductSales-students.part2-rar.axx), το οποίο είναι κρυμμένο στην Image2 από το ίδιο email.
 Αυτό το είχαμε υποπτευθεί ήδη, καθώς βρίσκοντας την αυθεντική εικόνα μέσω του Google image search και συγκρίνοντάς την (diff) με την τροποποιημένη, παρατηρούμε ότι έχουν προστεθεί δεδομένα προς το τέλος της εικόνας, χωρίς να έχει υποστεί άλλη αλλοίωση. Τα δεδομένα ήταν σε base64 και είχαν ίδιο μέγεθος με το [ProductSales-students.part1-rar.axx](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/ProductSales-students.part1-rar.axx), το οποίο ήταν αρκετό για να μας υποψιάσει ότι βρήκαμε το 2ο μέρος.
 
-Η εικόνα inception_movie_poster_high_definition.jpg μας δίνει: 1cDE Npyd nIn3 FDPZ Lprl 3hJn Fw0M 58wW oyEJ Ydll 8Fg= , το οποίο είναι και το πρώτο Keyfile.
+Η εικόνα [inception_movie_poster_high_definition.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/inception_movie_poster_high_definition.jpg) μας δίνει: __1cDE Npyd nIn3 FDPZ Lprl 3hJn Fw0M 58wW oyEJ Ydll 8Fg=__ , το οποίο είναι και το πρώτο Keyfile.
 
 __SilentEye__ is a cross-platform application design for an easy use of steganography, in this case hiding messages into pictures and sounds. It provides a pretty nice interface and an easy integration of new steganography algorithm and cryptography process by using a plug-ins system.                                                     
 
