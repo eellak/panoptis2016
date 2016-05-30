@@ -25,20 +25,20 @@ Connection: keep-alive
 Από τα 4 emails που μας δίνονται, παρατηρούμε σημεία με κωδικοποιημένη  πληροφορία Base64.
 Αποκωδικοποιούμε τα σημεία αυτά με Base64 και παίρνουμε σαν έξοδο τα παρακάτω: 
 
-1) Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_1.txt) που στάλθηκε στις **Fri Feb 29 03:29:15 2016** περιέχει την πληροφορία:
+1) Το [email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_1.txt) που στάλθηκε στις **Fri Feb 29 03:29:15 2016** περιέχει την πληροφορία:
 _Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta (7) synolika "stoixeia-tmimata" (parts) ta opoia tha sas dosoun ti lysi tou epeisodiou. | I ekseliksi tou einai ayksanomenis dyskolias kai xrisimopoiithikan ergaleia kai texnikes pou kalyptoun to megalytero fasma tis steganographias kai ton texnologion pou xrisimopoiountai. | Kata ti diarkeia tis askisis tha dinontai, efoson zitithoun, hints pou tha voithisoun stin ekseliksi tou epeisodiou. | Mporeite na ksekinisete tin epilysi tou epeisodiou arxizontas apo to 2o mail.%PDF-1.5_
-Οι επόμενες γραμμές αποτελούν ένα ![κρατικό έγγραφο σε μορφή PDF](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/PDF_apo_email1.pdf) 
+Οι επόμενες γραμμές αποτελούν ένα [κρατικό έγγραφο σε μορφή PDF](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/PDF_apo_email1.pdf) 
 
-2)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_2.txt) που στάλθηκε στις **Thu Mar 10 03:30:33 2016** περιέχει 2 εικόνες JPG: 
+2)Το [email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_2.txt) που στάλθηκε στις **Thu Mar 10 03:30:33 2016** περιέχει 2 εικόνες JPG: 
 [Image1](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/image1_apo_email2.jpg) και 
 [Image2](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/image2_apo_email2.jpg)
 Παρατηρούμε ότι η 1η εικόνα περιέχει ΚΑΙ ΑΥΤΗ Base64 κωδικοποίηση σε ένα σημείο της!
 Επίσης, το μέγεθος της 2ης εικόνας είναι σχετικά μεγάλο. Αυτό μας δημιούργησε υποψίες για κρυφά data μέσα στην εικόνα.
 
-3)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_3.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει μια [JPG εικόνα](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/apo_email-3.jpg).
+3)Το [email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_3.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει μια [JPG εικόνα](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/apo_email-3.jpg).
 Αλλάζοντας την κατάληξη της εικόνας αυτής σε RAR παρατηρούμε ότι μέσα της περιέχει μια εικόνα με όνομα [inception_movie_poster_high_definition.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/inception_movie_poster_high_definition.jpg).
 
-4)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_4.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει την [cyber.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cyber_apo_email-4.jpg) εικόνα: 
+4)Το [email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_4.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει την [cyber.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cyber_apo_email-4.jpg) εικόνα: 
 
 Όλα τα παραπάνω email περιείχαν και [ενοχοποιητικά μηνύματα](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/all_emails_text.txt), όπως το 4o email που ειδοποιεί τον παραλήπτη ότι η ασφάλεια έχει γίνει αυστηρότερη και πρέπει να αλλάξει μορφή η επικοινωνία τους.
 
