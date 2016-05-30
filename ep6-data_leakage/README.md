@@ -70,7 +70,7 @@ To video ονομάζεται “welcome to the next level”
 
 To link παραπέμπει σε youtube video με παράξενους ήχους. Κάναμε το video convert σε mp3. Η σελίδα του youtube παραπέμπει με την σειρά της στο : [https://twitter.com/opanoptis](https://twitter.com/opanoptis)
 
-Η επεξεργασία του ήχου με Audacity ή Spek εμφανίζει το φάσμα των ήχων που σχηματίζει το παρακάτω μήνυμα: “Congratulations you are almost there! Here is the password to decrypt the file. Password: Pa_16__“ (https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/AXX_Password.JPG)
+Η επεξεργασία του ήχου με Audacity ή Spek εμφανίζει το φάσμα των ήχων που σχηματίζει το παρακάτω μήνυμα: “Congratulations you are almost there! Here is the password to decrypt the file. Password: Pa_16__“ ![AXX_Password](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/AXX_Password.JPG)
 
 Στο twitter, παρατηρούμε 2 ύποπτα μηνύματα:
 1.	Animated_57049.mp4 seead://octgp.rzzrwp.nzx/zapy?to=0M6M-B38rL6HbmvatFECKlOKJCHX
