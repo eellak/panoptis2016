@@ -26,31 +26,31 @@ Connection: keep-alive
 Αποκωδικοποιούμε τα σημεία αυτά με Base64 και παίρνουμε σαν έξοδο τα παρακάτω: 
 
 1) Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_1.txt) που στάλθηκε στις **Fri Feb 29 03:29:15 2016** περιέχει την πληροφορία:
-__(Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta (7) synolika "stoixeia-tmimata" (parts) ta opoia tha sas dosoun ti lysi tou epeisodiou. | I ekseliksi tou einai ayksanomenis dyskolias kai xrisimopoiithikan ergaleia kai texnikes pou kalyptoun to megalytero fasma tis steganographias kai ton texnologion pou xrisimopoiountai. | Kata ti diarkeia tis askisis tha dinontai, efoson zitithoun, hints pou tha voithisoun stin ekseliksi tou epeisodiou. | Mporeite na ksekinisete tin epilysi tou epeisodiou arxizontas apo to 2o mail.%PDF-1.5)__
+_Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta (7) synolika "stoixeia-tmimata" (parts) ta opoia tha sas dosoun ti lysi tou epeisodiou. | I ekseliksi tou einai ayksanomenis dyskolias kai xrisimopoiithikan ergaleia kai texnikes pou kalyptoun to megalytero fasma tis steganographias kai ton texnologion pou xrisimopoiountai. | Kata ti diarkeia tis askisis tha dinontai, efoson zitithoun, hints pou tha voithisoun stin ekseliksi tou epeisodiou. | Mporeite na ksekinisete tin epilysi tou epeisodiou arxizontas apo to 2o mail.%PDF-1.5_
 Οι επόμενες γραμμές αποτελούν ένα ![κρατικό έγγραφο σε μορφή PDF](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/PDF_apo_email1.pdf) 
 
 2)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_2.txt) που στάλθηκε στις **Thu Mar 10 03:30:33 2016** περιέχει 2 εικόνες JPG: 
-[Image1](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/image1_apo_email2.jpg)
+[Image1](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/image1_apo_email2.jpg) και 
 [Image2](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/image2_apo_email2.jpg)
 Παρατηρούμε ότι η 1η εικόνα περιέχει ΚΑΙ ΑΥΤΗ Base64 κωδικοποίηση σε ένα σημείο της!
 Επίσης, το μέγεθος της 2ης εικόνας είναι σχετικά μεγάλο. Αυτό μας δημιούργησε υποψίες για κρυφά data μέσα στην εικόνα.
 
-3)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_3.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει την JPG εικόνα: https://drive.google.com/open?id=0B3Mkr-G7WiW3Nmx6V3F4WkdIS2M
-Αλλάζοντας την κατάληξη της εικόνας αυτή σε RAR παρατηρούμε ότι μέσα της περιέχει μια εικόνα με όνομα inception_movie_poster_high_definition.jpg https://drive.google.com/open?id=0B3Mkr-G7WiW3VUc5ck5sbWhSWG8  
+3)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_3.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει μια [JPG εικόνα](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/apo_email-3.jpg).
+Αλλάζοντας την κατάληξη της εικόνας αυτής σε RAR παρατηρούμε ότι μέσα της περιέχει μια εικόνα με όνομα [inception_movie_poster_high_definition.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/inception_movie_poster_high_definition.jpg).
 
-4)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_4.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει την cyber.jpg εικόνα: https://drive.google.com/open?id=0B3Mkr-G7WiW3Mk8wOWpSc29adjg
+4)Το ![email](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/email_4.txt) που στάλθηκε στις **Wed Mar 18 03:32:47 2016** περιέχει την [cyber.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cyber_apo_email-4.jpg) εικόνα: 
 
-Όλα τα παραπάνω email περιείχαν και ενοχοποιητικά μηνύματα, όπως το 4o email που ειδοποιεί τον παραλήπτη ότι η ασφάλεια έχει γίνει αυστηρότερη και πρέπει να αλλάξει μορφή η επικοινωνία τους.
+Όλα τα παραπάνω email περιείχαν και [ενοχοποιητικά μηνύματα](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/all_emails_text.txt), όπως το 4o email που ειδοποιεί τον παραλήπτη ότι η ασφάλεια έχει γίνει αυστηρότερη και πρέπει να αλλάξει μορφή η επικοινωνία τους.
 
-Γνωρίζοντας ότι ο χρήστης-στόχος έχει στην κατοχή του το SilentEye εκτελούμε στεγανάλυση σε όλες τις εικόνες αποκρυπτογραφώντας με το προεπιλεγμένο password το “SilentEye”.
-Από την εικόνα IMAGE_1 παίρνουμε ένα text αρχείο το οποίο μας βοηθάει στην ανακάλυψη του ProductSales-students.part2-rar.axx, το οποίο είναι κρυμμένο στην image2 από το ίδιο email.
-Αυτό το είχαμε υποπτευθεί ήδη, καθώς βρίσκοντας την αυθεντική εικόνα μέσω του google reverse image search και συγκρίνοντάς την (diff) με την τροποποιημένη, παρατηρούμε ότι έχουν προστεθεί δεδομένα προς το τέλος της εικόνας, χωρίς να έχει υποστεί άλλη αλλοίωση. Τα δεδομένα ήταν σε base64 και είχαν ίδιο μέγεθος με το ProductSales-students.part1-rar.axx, το οποίο ήταν αρκετό για να μας υποψιάσει ότι βρήκαμε το 2ο μέρος.
+Γνωρίζοντας ότι ο χρήστης-στόχος έχει στην κατοχή του το __SilentEye__ εκτελούμε στεγανάλυση σε όλες τις εικόνες αποκρυπτογραφώντας με το προεπιλεγμένο password το “SilentEye”.
+Από την εικόνα Image1 παίρνουμε ένα text αρχείο (keyfile) το οποίο μας βοηθάει στην αποκρυπτογράφηση του ProductSales-students.part2-rar.axx, το οποίο είναι κρυμμένο στην Image2 από το ίδιο email.
+Αυτό το είχαμε υποπτευθεί ήδη, καθώς βρίσκοντας την αυθεντική εικόνα μέσω του Google image search και συγκρίνοντάς την (diff) με την τροποποιημένη, παρατηρούμε ότι έχουν προστεθεί δεδομένα προς το τέλος της εικόνας, χωρίς να έχει υποστεί άλλη αλλοίωση. Τα δεδομένα ήταν σε base64 και είχαν ίδιο μέγεθος με το ProductSales-students.part1-rar.axx, το οποίο ήταν αρκετό για να μας υποψιάσει ότι βρήκαμε το 2ο μέρος.
 
-Η εικόνα inception_movie_poster_high_definition.jpg μας δίνει: 1cDE Npyd nIn3 FDPZ Lprl 3hJn Fw0M 58wW oyEJ Ydll 8Fg=, το οποίο είναι και το πρώτο Keyfile.
+Η εικόνα inception_movie_poster_high_definition.jpg μας δίνει: 1cDE Npyd nIn3 FDPZ Lprl 3hJn Fw0M 58wW oyEJ Ydll 8Fg= , το οποίο είναι και το πρώτο Keyfile.
 
-SilentEye - Steganography is yours   SilentEye is a cross-platform application design for an easy use of steganography, in this case hiding messages into pictures and sounds. It provides a pretty nice interface and an easy integration of new steganography algorithm and cryptography process by using a plug-ins system.                                                     
+__SilentEye__ - _Steganography is yours_   SilentEye is a cross-platform application design for an easy use of steganography, in this case hiding messages into pictures and sounds. It provides a pretty nice interface and an easy integration of new steganography algorithm and cryptography process by using a plug-ins system.                                                     
 
-Η εικόνα cyber.jpg από το email 4 είναι στεγανογραφημένη με το steghide καθώς φαίνεται το Watermark στην μέση της εικόνας. Από την στεγανάλυση προκύπτει αρχείο με το παρακάτω περιεχόμενο: 
+Η εικόνα cyber.jpg από το email 4 είναι στεγανογραφημένη με το πρόγραμμα __steghide__ καθώς φαίνεται το Watermark στην μέση της εικόνας. Από την στεγανάλυση προκύπτει αρχείο με το παρακάτω περιεχόμενο: _
 +++++ +++++ [->++ +++++ +++<] >++++ .<+++ [->++ +<]>+ ++..- ---.+ ++.<+
 +++++ +[->- ----- -<]>- ----- --.<+ ++[-> ---<] >--.. <++++ ++++[ ->+++
 +++++ <]>++ +++++ +++.< +++[- >---< ]>-.+ +++++ .-.+. <++++ ++++[ ->---
@@ -59,12 +59,11 @@ SilentEye - Steganography is yours   SilentEye is a cross-platform application d
 +<]>+ .--.< +++++ +++[- >---- ----< ]>--- -.<++ ++++[ ->+++ +++<] >+++.
 <+++[ ->--- <]>-- ----. <++++ [->-- --<]> ---.< +++[- >+++< ]>+++ .<+++
 +++[- >++++ ++<]> ++.<+ +++++ [->-- ----< ]>--. <
-https://drive.google.com/file/d/0B6B-Q38gA6WqR3ltUUpnTDNjTDg/view?usp=sharing
+https://drive.google.com/file/d/0B6B-Q38gA6WqR3ltUUpnTDNjTDg/view?usp=sharing   _
 
-Ο σύνδεσμος αυτός περιέχει ένα αρχείο ήχου που μας λέει τους αριθμούς : 
-2 18 1 9 14 6 21 3 11
-
-Για Α=1, Β=2, κτλ οι αριθμοί αυτοί μας δίνουν την λέξη “BRAINFUCK”
+Ο σύνδεσμος αυτός περιέχει ένα [αρχείο ήχου](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/transmission.mp3) που μας λέει τους αριθμούς : 
+__ 2 18 1 9 14 6 21 3 11 __
+Για Α=1, Β=2, κτλ οι αριθμοί αυτοί μας δίνουν την λέξη __ BRAINFUCK __
 
 Η εκτέλεση του κώδικα brainfuck δίνει το παρακάτω URL: https://youtu.be/9Dvt0WH5AgA
 To video ονομάζεται “welcome to the next level”
