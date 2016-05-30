@@ -43,14 +43,14 @@ _Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta 
 Όλα τα παραπάνω email περιείχαν και [ενοχοποιητικά μηνύματα](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/all_emails_text.txt), όπως το 4o email που ειδοποιεί τον παραλήπτη ότι η ασφάλεια έχει γίνει αυστηρότερη και πρέπει να αλλάξει μορφή η επικοινωνία τους.
 
 Γνωρίζοντας ότι ο χρήστης-στόχος έχει στην κατοχή του το __SilentEye__ εκτελούμε στεγανάλυση σε όλες τις εικόνες αποκρυπτογραφώντας με το προεπιλεγμένο password το “SilentEye”.
-Από την εικόνα Image1 παίρνουμε ένα text αρχείο (keyfile) το οποίο μας βοηθάει στην αποκρυπτογράφηση του ProductSales-students.part2-rar.axx, το οποίο είναι κρυμμένο στην Image2 από το ίδιο email.
+Από την εικόνα Image1 παίρνουμε ένα text αρχείο (keyfile) το οποίο μας βοηθάει στην αποκρυπτογράφηση του __ProductSales-students.part2-rar.axx__, το οποίο είναι κρυμμένο στην Image2 από το ίδιο email.
 Αυτό το είχαμε υποπτευθεί ήδη, καθώς βρίσκοντας την αυθεντική εικόνα μέσω του Google image search και συγκρίνοντάς την (diff) με την τροποποιημένη, παρατηρούμε ότι έχουν προστεθεί δεδομένα προς το τέλος της εικόνας, χωρίς να έχει υποστεί άλλη αλλοίωση. Τα δεδομένα ήταν σε base64 και είχαν ίδιο μέγεθος με το ProductSales-students.part1-rar.axx, το οποίο ήταν αρκετό για να μας υποψιάσει ότι βρήκαμε το 2ο μέρος.
 
 Η εικόνα inception_movie_poster_high_definition.jpg μας δίνει: 1cDE Npyd nIn3 FDPZ Lprl 3hJn Fw0M 58wW oyEJ Ydll 8Fg= , το οποίο είναι και το πρώτο Keyfile.
 
-__SilentEye__ - _Steganography is yours_   SilentEye is a cross-platform application design for an easy use of steganography, in this case hiding messages into pictures and sounds. It provides a pretty nice interface and an easy integration of new steganography algorithm and cryptography process by using a plug-ins system.                                                     
+__SilentEye__ is a cross-platform application design for an easy use of steganography, in this case hiding messages into pictures and sounds. It provides a pretty nice interface and an easy integration of new steganography algorithm and cryptography process by using a plug-ins system.                                                     
 
-Η εικόνα cyber.jpg από το email 4 είναι στεγανογραφημένη με το πρόγραμμα __steghide__ καθώς φαίνεται το Watermark στην μέση της εικόνας. Από την στεγανάλυση προκύπτει αρχείο με το παρακάτω περιεχόμενο: _
+Η εικόνα cyber.jpg από το email 4 είναι στεγανογραφημένη με το πρόγραμμα __steghide__ καθώς φαίνεται το Watermark στην μέση της εικόνας. Από την στεγανάλυση προκύπτει αρχείο με το παρακάτω περιεχόμενο: 
 +++++ +++++ [->++ +++++ +++<] >++++ .<+++ [->++ +<]>+ ++..- ---.+ ++.<+
 +++++ +[->- ----- -<]>- ----- --.<+ ++[-> ---<] >--.. <++++ ++++[ ->+++
 +++++ <]>++ +++++ +++.< +++[- >---< ]>-.+ +++++ .-.+. <++++ ++++[ ->---
@@ -59,18 +59,18 @@ __SilentEye__ - _Steganography is yours_   SilentEye is a cross-platform applica
 +<]>+ .--.< +++++ +++[- >---- ----< ]>--- -.<++ ++++[ ->+++ +++<] >+++.
 <+++[ ->--- <]>-- ----. <++++ [->-- --<]> ---.< +++[- >+++< ]>+++ .<+++
 +++[- >++++ ++<]> ++.<+ +++++ [->-- ----< ]>--. <
-https://drive.google.com/file/d/0B6B-Q38gA6WqR3ltUUpnTDNjTDg/view?usp=sharing   _
+https://drive.google.com/file/d/0B6B-Q38gA6WqR3ltUUpnTDNjTDg/view?usp=sharing   
 
 Ο σύνδεσμος αυτός περιέχει ένα [αρχείο ήχου](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/transmission.mp3) που μας λέει τους αριθμούς : 
-__ 2 18 1 9 14 6 21 3 11 __
-Για Α=1, Β=2, κτλ οι αριθμοί αυτοί μας δίνουν την λέξη __ BRAINFUCK __
+2 18 1 9 14 6 21 3 11 
+Για Α=1, Β=2, κτλ οι αριθμοί αυτοί μας δίνουν την λέξη BRAINFUCK 
 
-Η εκτέλεση του κώδικα brainfuck δίνει το παρακάτω URL: https://youtu.be/9Dvt0WH5AgA
+Η [εκτέλεση του κώδικα brainfuck ](https://copy.sh/brainfuck/) δίνει το παρακάτω URL: https://youtu.be/9Dvt0WH5AgA
 To video ονομάζεται “welcome to the next level”
 
-To link παραπέμπει σε youtube video με παράξενους ήχους. Κάναμε το video convert σε mp3. Επίσης η σελίδα του youtube παραπέμπει το link: https://twitter.com/opanoptis
+To link παραπέμπει σε youtube video με παράξενους ήχους. Κάναμε το video convert σε mp3. Η σελίδα του youtube παραπέμπει με την σειρά της στο : [https://twitter.com/opanoptis](https://twitter.com/opanoptis)
 
-Η επεξεργασία του ήχου με audacity εμφανίζει το φάσμα των ήχων που σχηματίζει το παρακάτω μήνυμα: “Congratulations you are almost there! Here is the password to decrypt the file. Password: Pa_16__“
+Η επεξεργασία του ήχου με Audacity ή Spek εμφανίζει το φάσμα των ήχων που σχηματίζει το παρακάτω μήνυμα: “Congratulations you are almost there! Here is the password to decrypt the file. Password: Pa_16__“ (https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/AXX_Password.JPG)
 
 Στο twitter, παρατηρούμε 2 ύποπτα μηνύματα:
 1.	Animated_57049.mp4 seead://octgp.rzzrwp.nzx/zapy?to=0M6M-B38rL6HbmvatFECKlOKJCHX
