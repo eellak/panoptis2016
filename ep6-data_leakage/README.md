@@ -95,7 +95,7 @@ To link παραπέμπει σε youtube video με παράξενους ήχο
 Ανοίγοντας με text editor το cloaked.jpg εντοπίσουμε το παρακάτω link στο τέλος του αρχείου:
 [https://drive.google.com/file/d/0B6B-Q38gA6WqSWJ1VUpvc05nQVE/view?usp=sharing](https://drive.google.com/file/d/0B6B-Q38gA6WqSWJ1VUpvc05nQVE/view?usp=sharing)
 Σε αυτό το link αποκτάμε το 3ο μέρος του encrypted αρχείου [ProductSales-student.part3-rar.axx](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/ProductSales-students.part3-rar.axx).
-Επίσης, χρησιμοποιώντας το εργαλείο steghide στην εικόνα [cloaked.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cloaked.jpg) και χρησιμοποιόντας ως passwprd την λέξη “anonymous” που βρήκαμε από το περιεχόμενο της εικόνας (μάσκα anonymous), πήραμε το τελευταίο keyfile ([keyfile3](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/Key_File3.txt)).
+Επίσης, χρησιμοποιώντας το εργαλείο steghide στην εικόνα [cloaked.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cloaked.jpg) και χρησιμοποιόντας ως password την λέξη “anonymous” που βρήκαμε από το περιεχόμενο της εικόνας (μάσκα anonymous), πήραμε το τελευταίο keyfile ([keyfile3](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/Key_File3.txt)).
 
 Το κάθε part χρησιμοποιεί διαφορετικό keyfile (καθώς το παράγει το AxCrypt) αλλά όλα έχουν το ίδιο password για να γίνουν decrypt (το password ορίζεται από τον χρήστη).
 
