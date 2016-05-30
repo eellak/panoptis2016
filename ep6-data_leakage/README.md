@@ -77,14 +77,15 @@ To link παραπέμπει σε youtube video με παράξενους ήχο
 
 2. __ykkgj://uizmv.xffxcv.tfd/wzcv/u/0S6S-H38xR6NhQLL4MYIqKeV4P1b/mzvn?ljg=jyrizex__
 
-Τα μηνύματα είναι encrypted με ceasarian cipher. Χρησιμοποιούμε το online decrypter: [xarg.org/tools/caesar-cipher](http://www.xarg.org/tools/caesar-cipher/)
-Μήνυμα 1) με n= 15 αποκαλύπτεται το μήνυμα : [https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM](https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM)
+Τα μηνύματα είναι encrypted με Caesar cipher. Χρησιμοποιούμε το online decrypter: [xarg.org/tools/caesar-cipher](http://www.xarg.org/tools/caesar-cipher/)
 
-Μήνυμα 2) με n=9 αποκαλύπτεται το μήνυμα : 
+Μήνυμα 1) για n= 15 αποκαλύπτεται το μήνυμα : [https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM](https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM)
+
+Μήνυμα 2) για n=9 αποκαλύπτεται το μήνυμα : 
 [https://drive.google.com/file/d/0B6B-Q38gA6WqZUU4VHRzTnE4Y1k/view?usp=sharing](https://drive.google.com/file/d/0B6B-Q38gA6WqZUU4VHRzTnE4Y1k/view?usp=sharing)
 
 Από το link https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM
-κατεβάζουμε το αρχείο : Animated_57049.mp4
+κατεβάζουμε το αρχείο : __Animated_57049.mp4__
 Χρησιμοποιώντας το εργαλείο Stegomagic (binary version), δίνοντας ως είσοδο για αποκρυπτογράφιση το παραπάνω video με κωδικό 57049 (από το όνομα του αρχείου) πήραμε μια εικόνα ([cybersecurity_54.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cybercrime_54.jpg)). 
 Εδώ πρέπει να σημειωθεί ότι η εικόνα δεν ονομαζόταν όντως έτσι(καθώς ο χρήστης ονομάζει το εξαγώμενο αρχείο) και έλειπε πληροφορία για το παραπάτω βήμα!
 Εφαρμόζοντας το Stegomagic (text version) στην παραπάνω εικόνα δίνοντας ως κωδικό το 54 από το όνομά της, πήραμε ένα keyfile ακόμα ([keyfile2](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/Key_File2.txt)).
