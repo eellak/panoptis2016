@@ -1,0 +1,139 @@
+From user1@bluecorp.ex  Fri Feb 29 03:29:15 2016
+Return-Path: <user1@bluecorp.ex>
+Received: from bluecorp.ex (bluecorp.ex [127.0.0.1])
+	by bluecorp.ex (8.14.3/8.14.3/Debian-9.1ubuntu1) with ESMTP id u3R7TFba002400
+	for <unowen@redfields.ex>; Fri, 29 Feb 2016 03:29:15 -0400
+MIME-Version: 1.0
+Date: Fri, 29 Feb 2016 03:29:15 -0400
+From: user1 <user1@bluecorp.ex>
+To: <unowen@redfields.ex>
+Subject: Decision
+Message-ID: <a43d948d8b6b87229239e4e6f06262c2@bluecorp.ex>
+X-Sender: user1@bluecorp.ex
+User-Agent: RoundCube Webmail/0.3.1
+Content-Type: multipart/mixed;
+ boundary="=_0c22b2aa7f99144d5c98ff1019e2a403"
+
+--=_0c22b2aa7f99144d5c98ff1019e2a403
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain;
+ charset=UTF-8
+
+Hey,
+
+I am sending you the document we were talking about
+
+u1
+--=_0c22b2aa7f99144d5c98ff1019e2a403
+Content-Transfer-Encoding: base64
+Content-Type: application/octet-stream; charset=binary;
+ name*=UTF-8''diaygeia-npid.pdf;
+ charset=UTF-8
+Content-Disposition: attachment;
+ filename*=UTF-8''diaygeia-npid.pdf
+--
+
+From user1@bluecorp.ex  Thu Mar 10 03:30:33 2016
+Return-Path: <user1@bluecorp.ex>
+Received: from bluecorp.ex (bluecorp.ex [127.0.0.1])
+	by bluecorp.ex (8.14.3/8.14.3/Debian-9.1ubuntu1) with ESMTP id u3R7UWkB002433
+	for <unowen@redfields.ex>; Thu, 10 Mar 2016 03:30:32 -0400
+MIME-Version: 1.0
+Date: Thu, 10 Mar 2016 03:30:32 -0400
+From: user1 <user1@bluecorp.ex>
+To: <unowen@redfields.ex>
+Subject: Trees
+Message-ID: <62a2861b05c5e917a2621acba5c2a46f@bluecorp.ex>
+X-Sender: user1@bluecorp.ex
+User-Agent: RoundCube Webmail/0.3.1
+Content-Type: multipart/mixed;
+ boundary="=_31354a97357c7941eee6b59ec9987928"
+
+--=_31354a97357c7941eee6b59ec9987928
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain;
+ charset=UTF-8
+
+Hey again,
+
+Some beautiful images, check them out!
+
+u1
+--=_31354a97357c7941eee6b59ec9987928
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg; charset=binary;
+ name*=UTF-8''image2.jpg;
+ charset=UTF-8
+Content-Disposition: attachment;
+ filename*=UTF-8''image2.jpg
+--
+
+From user1@bluecorp.ex  Wed Mar 18 03:32:47 2016
+Return-Path: <user1@bluecorp.ex>
+Received: from bluecorp.ex (bluecorp.ex [127.0.0.1])
+	by bluecorp.ex (8.14.3/8.14.3/Debian-9.1ubuntu1) with ESMTP id u3R7Wl7R002463
+	for <unowen@redfields.ex>; Wed, Mar 18 2016 03:32:47 -0400
+MIME-Version: 1.0
+Date: Wed, Mar 18 2016 03:32:47 -0400
+From: user1 <user1@bluecorp.ex>
+To: <unowen@redfields.ex>
+Subject: Interesting story
+Message-ID: <23e7a16e256dab5c47095b43b1013718@bluecorp.ex>
+X-Sender: user1@bluecorp.ex
+User-Agent: RoundCube Webmail/0.3.1
+Content-Type: multipart/mixed;
+ boundary="=_8c06ad06e032faf48ef32259a90b3250"
+
+--=_8c06ad06e032faf48ef32259a90b3250
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain;
+ charset=UTF-8
+
+Hey again,
+
+Did you knew that there is a strange doll called Babushka? It seems really
+interesting! ;)
+https://en.wikipedia.org/wiki/Matryoshka_doll
+
+u1
+--=_8c06ad06e032faf48ef32259a90b3250
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg; charset=binary;
+ name*=UTF-8''Babushka.jpg;
+ charset=UTF-8
+Content-Disposition: attachment;
+ filename*=UTF-8''Babushka.jpg
+--
+
+From user1@bluecorp.ex  Mon Apr 11 03:36:54 2016
+Return-Path: <user1@bluecorp.ex>
+Received: from bluecorp.ex (bluecorp.ex [127.0.0.1])
+	by bluecorp.ex (8.14.3/8.14.3/Debian-9.1ubuntu1) with ESMTP id u3R7asi9002485
+	for <unowen@redfields.ex>; Mon, 11 Apr 2016 03:36:54 -0400
+MIME-Version: 1.0
+Date: Mon, 11 Apr 2016 03:36:54 -0400
+From: user1 <user1@bluecorp.ex>
+To: <unowen@redfields.ex>
+Subject: Changing things
+Message-ID: <b5831aab0d69d0d347e902c19ed63021@bluecorp.ex>
+X-Sender: user1@bluecorp.ex
+User-Agent: RoundCube Webmail/0.3.1
+Content-Type: multipart/mixed;
+ boundary="=_62a5022482bad1bb6e0f807ec5e6d9e5"
+
+--=_62a5022482bad1bb6e0f807ec5e6d9e5
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain;
+ charset=UTF-8
+
+Security tightened!
+Since things are changing, we need to change too. 
+
+u1
+--=_62a5022482bad1bb6e0f807ec5e6d9e5
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg; charset=binary;
+ name*=UTF-8''cyber.jpg;
+ charset=UTF-8
+Content-Disposition: attachment;
+ filename*=UTF-8''cyber.jpg
