@@ -43,8 +43,8 @@ _Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta 
 Όλα τα παραπάνω email περιείχαν και [ενοχοποιητικά μηνύματα](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/all_emails_text.txt), όπως το 4o email που ειδοποιεί τον παραλήπτη ότι η ασφάλεια έχει γίνει αυστηρότερη και πρέπει να αλλάξει μορφή η επικοινωνία τους.
 
 Γνωρίζοντας ότι ο χρήστης-στόχος έχει στην κατοχή του το __SilentEye__ εκτελούμε στεγανάλυση σε όλες τις εικόνες αποκρυπτογραφώντας με το προεπιλεγμένο password το “SilentEye”.
-Από την εικόνα Image1 παίρνουμε ένα text αρχείο (keyfile) το οποίο μας βοηθάει στην αποκρυπτογράφηση του __ProductSales-students.part2-rar.axx__, το οποίο είναι κρυμμένο στην Image2 από το ίδιο email.
-Αυτό το είχαμε υποπτευθεί ήδη, καθώς βρίσκοντας την αυθεντική εικόνα μέσω του Google image search και συγκρίνοντάς την (diff) με την τροποποιημένη, παρατηρούμε ότι έχουν προστεθεί δεδομένα προς το τέλος της εικόνας, χωρίς να έχει υποστεί άλλη αλλοίωση. Τα δεδομένα ήταν σε base64 και είχαν ίδιο μέγεθος με το ProductSales-students.part1-rar.axx, το οποίο ήταν αρκετό για να μας υποψιάσει ότι βρήκαμε το 2ο μέρος.
+Από την εικόνα Image1 παίρνουμε ένα text αρχείο ([__keyfile__](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/Key_File1.txt)) το οποίο μας βοηθάει στην αποκρυπτογράφηση του [__ProductSales-students.part2-rar.axx__](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/ProductSales-students.part2-rar.axx), το οποίο είναι κρυμμένο στην Image2 από το ίδιο email.
+Αυτό το είχαμε υποπτευθεί ήδη, καθώς βρίσκοντας την αυθεντική εικόνα μέσω του Google image search και συγκρίνοντάς την (diff) με την τροποποιημένη, παρατηρούμε ότι έχουν προστεθεί δεδομένα προς το τέλος της εικόνας, χωρίς να έχει υποστεί άλλη αλλοίωση. Τα δεδομένα ήταν σε base64 και είχαν ίδιο μέγεθος με το [ProductSales-students.part1-rar.axx](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/ProductSales-students.part1-rar.axx), το οποίο ήταν αρκετό για να μας υποψιάσει ότι βρήκαμε το 2ο μέρος.
 
 Η εικόνα inception_movie_poster_high_definition.jpg μας δίνει: 1cDE Npyd nIn3 FDPZ Lprl 3hJn Fw0M 58wW oyEJ Ydll 8Fg= , το οποίο είναι και το πρώτο Keyfile.
 
@@ -72,30 +72,30 @@ To link παραπέμπει σε youtube video με παράξενους ήχο
 
 Η επεξεργασία του ήχου με Audacity ή Spek εμφανίζει το φάσμα των ήχων που σχηματίζει το παρακάτω μήνυμα: “Congratulations you are almost there! Here is the password to decrypt the file. Password: Pa_16__“ ![AXX_Password](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/AXX_Password.JPG)
 
-Στο twitter, παρατηρούμε 2 ύποπτα μηνύματα:
-1.	Animated_57049.mp4 seead://octgp.rzzrwp.nzx/zapy?to=0M6M-B38rL6HbmvatFECKlOKJCHX
-2.	 ykkgj://uizmv.xffxcv.tfd/wzcv/u/0S6S-H38xR6NhQLL4MYIqKeV4P1b/mzvn?ljg=jyrizex
+Στο [twitter](https://twitter.com/opanoptis), παρατηρούμε 2 ύποπτα μηνύματα:
+1. __Animated_57049.mp4 seead://octgp.rzzrwp.nzx/zapy?to=0M6M-B38rL6HbmvatFECKlOKJCHX__
+2. __ykkgj://uizmv.xffxcv.tfd/wzcv/u/0S6S-H38xR6NhQLL4MYIqKeV4P1b/mzvn?ljg=jyrizex__
 
-Τα μηνύματα είναι encrypted με ceasarian cipher.Χρησιμοποιούμε το online decrypter: http://www.xarg.org/tools/caesar-cipher/
-Μήνυμα 1) με n= 15 αποκαλύπτεται το μήνυμα : https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM
+Τα μηνύματα είναι encrypted με ceasarian cipher. Χρησιμοποιούμε το online decrypter: [xarg.org/tools/caesar-cipher](http://www.xarg.org/tools/caesar-cipher/)
+Μήνυμα 1) με n= 15 αποκαλύπτεται το μήνυμα : [https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM](https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM)
 
 Μήνυμα 2) με n=9 αποκαλύπτεται το μήνυμα : 
-https://drive.google.com/file/d/0B6B-Q38gA6WqZUU4VHRzTnE4Y1k/view?usp=sharing
+[https://drive.google.com/file/d/0B6B-Q38gA6WqZUU4VHRzTnE4Y1k/view?usp=sharing](https://drive.google.com/file/d/0B6B-Q38gA6WqZUU4VHRzTnE4Y1k/view?usp=sharing)
 
-Από link https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM
+Από το link https://drive.google.com/open?id=0B6B-Q38gA6WqbkpiUTRZaDZYRWM
 κατεβάζουμε το αρχείο : Animated_57049.mp4
-Χρησιμοποιώντας το εργαλείο Stegomagic (binary version), δίνοντας ως είσοδο για αποκρυπτογράφιση το παραπάνω video με κωδικό 57049 (από το όνομα του αρχείου) πήραμε μια εικόνα (cybersecurity_54.jpg). 
-Εδώ πρέπει να σημειωθεί ότι η εικόνα δεν ονομαζόταν όντως έτσι και έλειπε πληροφορία για το παραπάτω βήμα!
-Εφαρμόζοντας το Stegomagic (text version) στην παραπάνω εικόνα δίνοντας ως κωδικό το 54 από το όνομά της, πήραμε ένα keyfile ακόμα (keyfile2).
+Χρησιμοποιώντας το εργαλείο Stegomagic (binary version), δίνοντας ως είσοδο για αποκρυπτογράφιση το παραπάνω video με κωδικό 57049 (από το όνομα του αρχείου) πήραμε μια εικόνα ([cybersecurity_54.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cybercrime_54.jpg)). 
+Εδώ πρέπει να σημειωθεί ότι η εικόνα δεν ονομαζόταν όντως έτσι(καθώς ο χρήστης ονομάζει το εξαγώμενο αρχείο) και έλειπε πληροφορία για το παραπάτω βήμα!
+Εφαρμόζοντας το Stegomagic (text version) στην παραπάνω εικόνα δίνοντας ως κωδικό το 54 από το όνομά της, πήραμε ένα keyfile ακόμα ([keyfile2](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/Key_File2.txt)).
 
-Από link https://drive.google.com/file/d/0B6B-Q38gA6WqZUU4VHRzTnE4Y1k/view?usp=sharing
-κατεβάζουμε το αρχείο : cloaked.jpg
+Από το link https://drive.google.com/file/d/0B6B-Q38gA6WqZUU4VHRzTnE4Y1k/view?usp=sharing
+κατεβάζουμε το αρχείο : [cloaked.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cloaked.jpg)
 Ανοίγοντας με text editor το cloaked.jpg εντοπίσουμε το παρακάτω link στο τέλος του αρχείου:
-https://drive.google.com/file/d/0B6B-Q38gA6WqSWJ1VUpvc05nQVE/view?usp=sharing
-Σε αυτό το link αποκτάμε το 3ο μέρος του encrypted αρχείου ProductSales-student.part3-rar.axx.
-Επίσης, χρησιμοποιώντας το εργαλείο steghide και ως passphrase την λέξη “anonymous” που βρήκαμε από το περιεχόμενο της εικόνας (μάσκα anonymous), πήραμε το τελευταίο keyfile (keyfile3).
+[https://drive.google.com/file/d/0B6B-Q38gA6WqSWJ1VUpvc05nQVE/view?usp=sharing](https://drive.google.com/file/d/0B6B-Q38gA6WqSWJ1VUpvc05nQVE/view?usp=sharing)
+Σε αυτό το link αποκτάμε το 3ο μέρος του encrypted αρχείου [ProductSales-student.part3-rar.axx](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/ProductSales-students.part3-rar.axx).
+Επίσης, χρησιμοποιώντας το εργαλείο steghide στην εικόνα [cloaked.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/cloaked.jpg) και χρησιμοποιόντας ως passwprd την λέξη “anonymous” που βρήκαμε από το περιεχόμενο της εικόνας (μάσκα anonymous), πήραμε το τελευταίο keyfile ([keyfile3](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/Key_File3.txt)).
 
-Φαίνεται πως κάθε part χρησιμοποιεί διαφορετικό key file και όλα έχουν το ίδιο password για να γίνουν decrypt.
+Το κάθε part χρησιμοποιεί διαφορετικό keyfile (καθώς το παράγει το AxCrypt) αλλά όλα έχουν το ίδιο password για να γίνουν decrypt (το password ορίζεται από τον χρήστη).
 
-Έχοντας ανακτήσει τα παραπάνω στοιχεία, δηλαδή τα 3 parts του .rar και τα 3 keyfiles, παρατηρώντας ότι τα 2 πρώτα αρχεία (part1, part2) έχουν το ίδιο μέγεθος, με το τρίτο αρχείο να είναι κατά πολύ μικρότερό τους, υποψιαζόμαστε ότι έχουμε όλα τα τμήματα της πληροφορίας που προσπαθεί να στείλει ο υποκλοπέας. Επομένως, χρησιμοποιώντας το Axcrypt με τα keyfiles 1,2,3 στα αντίστοιχα parts, παίρνουμε τα αποκρυπτογραφημένα τμήματα του ProductSales-students.rar. Προχωρώντας σε αποσυμπίεση, καταλήξαμε στο αρχείο ProductSales-student.mdb, το οποίο περιέχει μέσα τα ευαίσθητα δεδομένα που εκλάπησαν από την εταιρεία.
+Έχοντας ανακτήσει τα παραπάνω στοιχεία, δηλαδή τα 3 parts του .rar και τα 3 keyfiles και το password, παρατηρώντας ότι τα 2 πρώτα αρχεία (part1, part2) έχουν το ίδιο μέγεθος, με το τρίτο αρχείο να είναι κατά πολύ μικρότερό τους, υποψιαζόμαστε ότι έχουμε όλα τα τμήματα της πληροφορίας που προσπαθεί να στείλει ο υποκλοπέας. Επομένως, χρησιμοποιώντας το Axcrypt με τα keyfiles 1,2,3 στα αντίστοιχα parts, παίρνουμε τα αποκρυπτογραφημένα τμήματα του ProductSales-students.rar. Προχωρώντας σε αποσυμπίεση, καταλήξαμε στο αρχείο [ProductSales-student.mdb](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/ProductSales-student.mdb), το οποίο περιέχει μέσα τα ευαίσθητα δεδομένα που εκλάπησαν από την εταιρεία.
 
