@@ -48,7 +48,6 @@ _Odigies: Gia tin oloklirosi tou epeisodiou tha xreiastei na sygkentrosete epta 
 
 Η εικόνα [inception_movie_poster_high_definition.jpg](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/inception_movie_poster_high_definition.jpg) μας δίνει: __1cDE Npyd nIn3 FDPZ Lprl 3hJn Fw0M 58wW oyEJ Ydll 8Fg=__ , το οποίο είναι και το πρώτο Keyfile.
 
-__SilentEye__ is a cross-platform application design for an easy use of steganography, in this case hiding messages into pictures and sounds. It provides a pretty nice interface and an easy integration of new steganography algorithm and cryptography process by using a plug-ins system.                                                     
 
 Η εικόνα cyber.jpg από το email 4 είναι στεγανογραφημένη με το πρόγραμμα __steghide__ καθώς φαίνεται το Watermark στην μέση της εικόνας. Από την στεγανάλυση προκύπτει αρχείο με το παρακάτω περιεχόμενο: 
 +++++ +++++ [->++ +++++ +++<] >++++ .<+++ [->++ +<]>+ ++..- ---.+ ++.<+
@@ -73,7 +72,9 @@ To link παραπέμπει σε youtube video με παράξενους ήχο
 Η επεξεργασία του ήχου με Audacity ή Spek εμφανίζει το φάσμα των ήχων που σχηματίζει το παρακάτω μήνυμα: “Congratulations you are almost there! Here is the password to decrypt the file. Password: Pa_16__“ ![AXX_Password](https://github.com/FournarakisKostas/panoptis2016/blob/master/ep6-data_leakage/AXX_Password.JPG)
 
 Στο [twitter](https://twitter.com/opanoptis), παρατηρούμε 2 ύποπτα μηνύματα:
+
 1. __Animated_57049.mp4 seead://octgp.rzzrwp.nzx/zapy?to=0M6M-B38rL6HbmvatFECKlOKJCHX__
+
 2. __ykkgj://uizmv.xffxcv.tfd/wzcv/u/0S6S-H38xR6NhQLL4MYIqKeV4P1b/mzvn?ljg=jyrizex__
 
 Τα μηνύματα είναι encrypted με ceasarian cipher. Χρησιμοποιούμε το online decrypter: [xarg.org/tools/caesar-cipher](http://www.xarg.org/tools/caesar-cipher/)
